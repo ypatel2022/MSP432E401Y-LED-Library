@@ -1,5 +1,3 @@
-
-
 // clang-format off
 #include "LED.h"
 #include <stdint.h>
@@ -55,10 +53,10 @@ void Init_D1(void)
     while ((SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R12) == 0)
     {
     };
-    // Make N0 & N1 outputs to turn on LEDs
-    GPIO_PORTN_DIR_R = PORTN_D1;
+
+    GPIO_PORTN_DIR_R |= PORTN_D1;
     // Enable
-    GPIO_PORTN_DEN_R = PORTN_D1;
+    GPIO_PORTN_DEN_R |= PORTN_D1;
     return;
 }
 
@@ -70,10 +68,10 @@ void Init_D2(void)
     while ((SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R12) == 0)
     {
     };
-    // Make N0 & N1 outputs to turn on LEDs
-    GPIO_PORTN_DIR_R = PORTN_D2;
+
+    GPIO_PORTN_DIR_R |= PORTN_D2;
     // Enable
-    GPIO_PORTN_DEN_R = PORTN_D2;
+    GPIO_PORTN_DEN_R |= PORTN_D2;
     return;
 }
 
@@ -85,10 +83,10 @@ void Init_D3(void)
     while ((SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R5) == 0)
     {
     };
-    // Make F0 & F4 outputs to turn on LEDs
-    GPIO_PORTF_DIR_R = PORTF_D3;
+
+    GPIO_PORTF_DIR_R |= PORTF_D3;
     // Enable
-    GPIO_PORTF_DEN_R = PORTF_D3;
+    GPIO_PORTF_DEN_R |= PORTF_D3;
     return;
 }
 
@@ -100,10 +98,10 @@ void Init_D4(void)
     while ((SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R5) == 0)
     {
     };
-    // Make F0 & F4 outputs to turn on LEDs
-    GPIO_PORTF_DIR_R = PORTF_D4;
+
+    GPIO_PORTF_DIR_R |= PORTF_D4;
     // Enable
-    GPIO_PORTF_DEN_R = PORTF_D4;
+    GPIO_PORTF_DEN_R |= PORTF_D4;
     return;
 }
 
